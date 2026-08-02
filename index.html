@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff5f7" />
+  <title>Birthday Surprise ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="petals" aria-hidden="true"></div>
+<div id="floatingHearts" aria-hidden="true"></div>
+  <canvas id="confetti"></canvas>
+
+  <section id="lockScreen" class="screen active">
+    <div class="glass login-card">
+      <div class="mini-heart">♥</div>
+      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+      <h1>There’s a surprise<br>waiting inside.</h1>
+      <p class="muted">Enter our secret password to unlock it.</p>
+      <form id="passwordForm">
+        <input id="passwordInput" type="password" placeholder="Secret password" autocomplete="off" />
+        <button type="submit">Unlock Surprise <span>→</span></button>
+        <p id="passwordError" class="error"></p>
+      </form>
+      <!--<p class="hint">Tip: Change the password in <b>script.js</b></p>-->
+    </div>
+  </section>
+
+  <main id="site" class="hidden">
+    <header class="hero section">
+      <button id="musicBtn" class="music-btn" aria-label="Toggle music">♫ <span>Music</span></button>
+      <div class="hero-inner">
+        <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+        <h1>Happy Birthday,<br><span id="heroName">My Love</span> <span class="heart">♥</span></h1>
+        <p class="hero-copy">I made this tiny corner of the internet just for you — for your smile, your memories, and one very special wish.</p>
+        <a class="primary-link" href="#cakeSection">Start the surprise ↓</a>
+      </div>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    </header>
+
+    <section id="cakeSection" class="section cake-section">
+      <div class="section-heading">
+        <p class="eyebrow">MAKE A WISH</p>
+        <h2>First, the birthday candle.</h2>
+        <p>Tap “Blow the candle” — or enable your microphone and blow toward your phone.</p>
+      </div>
+      <div class="cake-wrap">
+        <div class="candle">
+          <div id="flame" class="flame"></div>
+          <div class="wick"></div>
+        </div>
+        <div class="cake-top"></div>
+        <div class="icing icing-1"></div><div class="icing icing-2"></div><div class="icing icing-3"></div>
+        <div class="cake-body"><span>♥</span><span>♥</span><span>♥</span></div>
+        <div class="plate"></div>
+      </div>
+      <div class="cake-actions">
+        <button id="blowBtn" class="primary-btn">Blow the candle 🕯️</button>
+        <button id="micBtn" class="secondary-btn">Use microphone</button>
+      </div>
+      <p id="wishText" class="wish-text">Close your eyes and make a wish… ✨</p>
+    </section>
+
+    <section class="section note-section">
+      <div class="section-heading">
+        <p class="eyebrow">FROM MY HEART</p>
+        <h2>A little note for you.</h2>
+      </div>
+      <div id="envelope" class="envelope" role="button" tabindex="0">
+        <div class="envelope-back"></div>
+        <div class="letter">
+          <p class="letter-date">On your special day</p>
+          <h3>To <span id="noteName">My Favorite Person</span>,</h3>
+          <p id="personalNote">Happy birthday to the person who makes ordinary days feel special. I hope this year brings you more laughter, peace, adventures, and everything your heart has been quietly wishing for.</p>
+          <p>Never forget how deeply appreciated you are. Here’s to you — today and always. ❤️</p>
+          <p class="signature">With all my love,<br><span>Your Name</span></p>
+        </div>
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <div class="seal">♥</div>
+      </div>
+      <p class="tap-hint">Tap the envelope to open it</p>
+    </section>
+
+    <section class="section memories-section">
+      <div class="section-heading">
+        <p class="eyebrow">OUR FAVORITE MOMENTS</p>
+        <h2>Some memories deserve forever.</h2>
+        <!--<p>Replace these placeholders with your own photos.</p>-->
+      </div>
+      <div class="memory-grid">
+        <figure class="photo-card"><div class="photo-placeholder"><img class="photo-placeholder" src="C:\Users\prave\Downloads\birthday_surprise_website\images\i never forgot.jpeg"</div><figcaption>That day I never want to forget.</figcaption></figure>
+        <figure class="photo-card"><div class="photo-placeholder"><img class="photo-placeholder" src="C:\Users\prave\Downloads\birthday_surprise_website\images\smile.jpeg"</div><figcaption>Your smile = my favorite view.</figcaption></figure>
+        <figure class="photo-card"><div class="photo-placeholder"><img class="photo-placeholder" src="C:\Users\prave\Downloads\birthday_surprise_website\images\adventure.jpeg"</div><figcaption>One of our little adventures.</figcaption></figure>
+        <figure class="photo-card"><div class="photo-placeholder"><img class="photo-placeholder" src="C:\Users\prave\Downloads\birthday_surprise_website\images\more memories.jpeg"</div><figcaption>More memories, always.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section reasons-section">
+      <div class="section-heading">
+        <p class="eyebrow">JUST SO YOU KNOW</p>
+        <h2>A few things I adore about you.</h2>
+      </div>
+      <div class="reason-list">
+        <div><b>01</b><p>The way you can make me smile without even trying.</p></div>
+        <div><b>02</b><p>Your heart — kind, beautiful, and completely yours.</p></div>
+        <div><b>03</b><p>How even simple moments feel better when you’re there.</p></div>
+        <div><b>04</b><p>Every tiny thing that makes you uniquely you.</p></div>
+      </div>
+    </section>
+
+    <footer class="final-section section">
+      <p class="eyebrow">ONE LAST THING</p>
+      <h2>I hope this birthday is the beginning of your happiest year yet.</h2>
+      <div class="big-heart">♥</div>
+      <p>Happy Birthday, <span id="footerName">My Love</span>.</p>
+      <small>Made with way too much love.</small>
+    <a class="final-surprise-btn" href="date.html">One Final Surprise ♥</a>
+</footer>
+  </main>
+
+  <audio id="bgMusic" loop preload="metadata">
+    <source src="C:\Users\prave\Downloads\Perfect by Edshreen.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
