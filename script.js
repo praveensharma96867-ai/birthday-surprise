@@ -35,7 +35,13 @@ $("#passwordForm").addEventListener("submit", e => {
 });
 
 $("#musicBtn").addEventListener("click", () => {
-  if (music.paused) { music.play().catch(()=>{}); $("#musicBtn").innerHTML = "♫ <span>Music on</span>"; }
+  if (music.paused) { music.currentTime = 0;
+
+music.play().then(() => {
+    $("#musicBtn").innerHTML = "♫ <span>Music on</span>";
+}).catch(() => {
+    $("#musicBtn").innerHTML = "♫ <span>Tap for music</span>";
+}); $("#musicBtn").innerHTML = "♫ <span>Music on</span>"; }
   else { music.pause(); $("#musicBtn").innerHTML = "♫ <span>Music off</span>"; }
 });
 
