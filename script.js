@@ -1,6 +1,6 @@
 // ===================== PERSONALIZE HERE =====================
 const CONFIG = {
-  password: "love123",        // Change the secret password
+  password: "manvi",        // Change the secret password
   name: "My Love",            // Birthday person's name
   senderName: "Mayank",    // Your name
   note: "Happy birthday to the person who makes ordinary days feel special. I hope this year brings you more laughter, peace, adventures, and everything your heart has been quietly wishing for."
